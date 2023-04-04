@@ -2,9 +2,10 @@
     color: #3e4444;
     margin: 0;
     padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 header {
-    height: 110px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     background: #82b74b;
@@ -25,8 +26,8 @@ flex-flow: column;
 justify-content: end;
 }
 .avatar {
-    height: 100px;
-    width: 100px;
+    max-height: 100px;
+    max-width: 100px;
     border-radius: 50%;
     vertical-align: middle;
     box-shadow: 5px 5px 5px #3e4444;
@@ -60,12 +61,10 @@ p {
 @media screen and (max-width: 700px) {
     header {
         flex-wrap: wrap;
-        height: auto;
-        width: auto;
         flex-flow: column;
+        align-items: center;
     }
-    main {
-        height: auto;
-        width: auto;
+    h1 {
+        padding-top: 10px;
     }
 }
