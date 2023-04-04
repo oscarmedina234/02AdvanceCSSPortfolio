@@ -6,7 +6,6 @@
 header {
     height: 110px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     background: #82b74b;
     padding: 10px;
@@ -16,6 +15,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: end;
+    width: max-content;
+    flex-wrap: nowrap;
 }
 
 h1 {
@@ -24,8 +25,8 @@ flex-flow: column;
 justify-content: end;
 }
 .avatar {
-    max-height: 100px;
-    max-width: 100px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     vertical-align: middle;
     box-shadow: 5px 5px 5px #3e4444;
@@ -43,8 +44,28 @@ flex-flow: column;
 justify-content: end;
 }
 
-section h2 p {
-    display: flex;
-    flex-wrap: wrap;
+main {
+padding: 20px;
+background-color: #c1946a;
 }
 
+h2 {
+    padding-bottom: 20px;
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+        flex-flow: column;
+    }
+    main {
+        height: auto;
+        width: auto;
+    }
+}
